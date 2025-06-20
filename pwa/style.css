@@ -1,0 +1,49 @@
+   body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      color: #111;
+      background: white;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    header h1 {
+      font-size: 2.5em;
+      color: #003b5c;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+    .section {
+      padding: 20px;
+    }
+    .news-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .news-grid article {
+      flex: 1;
+      min-width: 250px;
+    }
+    .news-grid img {
+      width: 100%;
+      height: auto;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      font-size: 0.9em;
+      background: #f8f8f8;
+    }
+    footer nav a {
+      margin: 0 5px;
+      color: #555;
+    }

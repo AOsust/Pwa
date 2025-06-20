@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Unos vijesti</title>
+  <style>
+    *{ font-family: 'Georgia', serif;
+  }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+     header {
+      color: #003b5c;
+      padding: 20px;
+      text-align: center;
+      margin-bottom:30px;
+      border-bottom: 1px solid #ccc;
+    }
+    header h2{
+      color :#003b5c;
+    }
+      nav a {
+      color: black;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+      footer {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      font-size: 0.9em;
+      background: rgb(236, 235, 235);
+      margin-top:30px;
+    }
+    footer nav a {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Unos vijesti</h1>
+  <nav>
+    <a href="index.php">HOME</a>
+    <a href="kategorija.php?id=europa">EUROPA</a>
+    <a href="kategorija.php?id=teknautas">TEKNAUTAS</a>
+    <a href="administracija.php">ADMINISTRACIJA</a>
+  </nav>
+</header>
+
+<form enctype="multipart/form-data" action="skripta.php" method="POST">
+  <label for="title">Naslov:</label>
+  <input type="text" name="title" required>
+
+  <label for="about">Kratki sadržaj (do 50 znakova):</label>
+  <textarea name="about" maxlength="50"></textarea>
+
+  <label for="content">Sadržaj:</label>
+  <textarea name="content" required></textarea>
+
+  <label for="pphoto">Slika:</label>
+  <input type="file" name="pphoto" accept="image/*" required>
+
+  <label for="category">Kategorija:</label>
+  <select name="category" required>
+    <option value="europa">Europa</option>
+    <option value="teknautas">Teknautas</option>
+  </select>
+  <label for="datum">Datum objave:</label>
+  <input type="date" name="datum" required>
+  <label>
+   <a> Arhiviraj <input type="checkbox" name="archive"></a>
+  </label>
+  <button type="submit">Pošalji</button>
+</form>
+ <footer>
+    <p>&copy; Antun Ošust-0246117225</p>
+  </footer>
+</body>
+
+
+</html>
